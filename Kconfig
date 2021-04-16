@@ -1,0 +1,28 @@
+menu "MbedCraft Wi-Fi Config"
+
+    config MC_SOFT_AP_SSID
+        string "Soft AP SSID"
+        default "myssid"
+        help
+            SSID (network name) of the Soft AP.
+
+    config MC_SOFT_AP_PASSWORD
+        string "Soft AP password"
+        default "mypassword"
+        help
+            Wi-Fi password (WPA or WPA2) for the Soft AP.
+
+    config MC_WIFI_CHANNEL
+        int "Wi-Fi channel"
+        range 1 13
+        default 1
+        help
+            Wi-Fi channel (network channel) for the example to use.
+
+    config MC_MAX_STA_CONN
+        int "Maximum station connections"
+        default 4
+        help
+            Maximum number of station connections to the Soft AP.
+
+endmenu
